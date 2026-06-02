@@ -46,6 +46,14 @@ docker compose exec app bun run seed
 
 The application will be available at **http://localhost:3000**.
 
+> **Reset from scratch:** To wipe all data (PostgreSQL volumes, Redis volumes, seed data) and start fresh:
+> ```bash
+> docker compose down -v
+> docker compose up --build
+> docker compose exec app bun run seed
+> ```
+> The `-v` flag removes the named volumes (`postgres_data`, `redis_data`), clearing all reservations, users, and sessions. Useful after running stress tests or when you want a clean slate.
+
 ---
 
 ## Development Setup

@@ -31,7 +31,7 @@ export function PaymentPage({ destination, seat, user, holdRemaining, error }: P
             <span>{price}</span>
           </div>
           <div class="summary-row">
-            <span>Hold expires in</span>
+            <span>Expires in</span>
             <span id="hold-timer">{formatTime(holdRemaining)}</span>
           </div>
         </div>
@@ -66,6 +66,12 @@ export function PaymentPage({ destination, seat, user, holdRemaining, error }: P
 
       <script>
         {`
+          function formatTime(s) {
+            var m = Math.floor(s / 60);
+            var sec = s % 60;
+            return m + ':' + (sec < 10 ? '0' : '') + sec;
+          }
+
           // Client-side countdown timer
           let remaining = ${holdRemaining};
           const timer = setInterval(() => {
