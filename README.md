@@ -4,6 +4,13 @@ High-concurrency seat reservation system built with **Bun**, **Elysia.js**, **Po
 
 The core engineering challenge is ensuring that a limited number of seats cannot be oversold, even when hundreds or thousands of users attempt to reserve them simultaneously.
 
+**Demo**
+<div align="center">
+   
+https://github.com/user-attachments/assets/60521a73-a4b4-442e-b84c-f1e541c3e233
+
+</div>
+
 ---
 
 ## Architecture
