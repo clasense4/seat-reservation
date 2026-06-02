@@ -3,10 +3,18 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.tsx",
+    "seed": "bun run db/seed.ts",
+    "test:stress": "bun run tests/stress-test.ts",
+    "test:integration": "bun run tests/integration-test.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/html": "^1.4.2",
+    "@kitajs/html": "^4.2.13",
+    "elysia": "latest",
+    "ioredis": "^5.11.0",
+    "postgres": "^3.4.9"
   },
   "devDependencies": {
     "bun-types": "latest"
